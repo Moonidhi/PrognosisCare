@@ -1,0 +1,131 @@
+=== cardiology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['Medium', 'Low', 'High']
+  Gender: ['Male', 'Female', 'Other']
+  Disease nunique: 5
+  Disease samples: ['Myocardial Infarction', 'Arrhythmia', 'Hypertension', 'Coronary Artery Disease', 'Heart Failure']
+  Normal_Value sample: ['<0.04 ng/mL', '60-100 bpm Regular']
+  Abnormal_Value sample: ['≥0.04 ng/mL', 'Irregular Rhythm']
+  BP sample: ['149/86', '123/93', '117/95']
+  HR sample: [79, 81, 71]
+  Temp sample: [100.9, 98.9, 97.7]
+  Symptoms sample: Severe Chest Pain, Sweating, Nausea, Shortness of Breath
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== dermatology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['High', 'Low', 'Medium']
+  Gender: ['Female', 'Male', 'Other']
+  Disease nunique: 4
+  Disease samples: ['Psoriasis', 'Acne', 'Skin Infection', 'Eczema']
+  Normal_Value sample: ['Normal Cells', 'Clear Skin']
+  Abnormal_Value sample: ['Rapid Cell Growth', 'Inflamed Sebaceous Glands']
+  BP sample: ['130/86', '122/99', '117/105']
+  HR sample: [68, 72, 77]
+  Temp sample: [97.3, 98.2, 99.2]
+  Symptoms sample: Scaly Patches, Red Plaques
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== endocrinology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['High', 'Medium', 'Low']
+  Gender: ['Male', 'Female', 'Other']
+  Disease nunique: 4
+  Disease samples: ['Hypothyroidism', 'PCOS', 'Hyperthyroidism', 'Diabetes']
+  Normal_Value sample: ['0.4-4.0 mIU/L', 'Normal LH/FSH']
+  Abnormal_Value sample: ['>4.0 mIU/L', 'Elevated LH']
+  BP sample: ['136/79', '133/69', '93/62']
+  HR sample: [89, 75, 65]
+  Temp sample: [98.7, 98.1, 99.4]
+  Symptoms sample: Weight Gain, Cold Intolerance, Fatigue
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== ent_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['Medium', 'Low', 'High']
+  Gender: ['Other', 'Male', 'Female']
+  Disease nunique: 4
+  Disease samples: ['Otitis Media', 'Sinusitis', 'Tonsillitis', 'Hearing Loss']
+  Normal_Value sample: ['Normal Eardrum', 'Normal Eardrum']
+  Abnormal_Value sample: ['Inflamed Eardrum', 'Inflamed Eardrum']
+  BP sample: ['123/82', '149/78', '139/66']
+  HR sample: [89, 90, 65]
+  Temp sample: [98.9, 98.7, 99.5]
+  Symptoms sample: Ear Pain, Hearing Loss
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== neurology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['High', 'Low', 'Medium']
+  Gender: ['Male', 'Other', 'Female']
+  Disease nunique: 5
+  Disease samples: ['Multiple Sclerosis', "Parkinson's Disease", 'Epilepsy', 'Stroke', 'Migraine']
+  Normal_Value sample: ['No Demyelination', 'Normal Motor Function']
+  Abnormal_Value sample: ['Demyelination Lesions', 'Motor Dysfunction']
+  BP sample: ['100/70', '90/80', '92/62']
+  HR sample: [77, 61, 74]
+  Temp sample: [98.3, 99.2, 97.7]
+  Symptoms sample: Vision Problems, Numbness, Fatigue, Muscle Weakness
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== nutrition_dietetics_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['High', 'Medium', 'Low']
+  Gender: ['Female', 'Other', 'Male']
+  Disease nunique: 4
+  Disease samples: ['Malnutrition', 'Eating Disorder', 'Obesity', 'Vitamin Deficiency']
+  Normal_Value sample: ['18.5-24.9', 'Healthy Pattern']
+  Abnormal_Value sample: ['<18.5', 'Disordered Eating']
+  BP sample: ['95/104', '122/81', '150/84']
+  HR sample: [75, 68, 89]
+  Temp sample: [99.9, 96.3, 99.0]
+  Symptoms sample: Weakness, Weight Loss
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== oncology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['Low', 'Medium', 'High']
+  Gender: ['Male', 'Female', 'Other']
+  Disease nunique: 4
+  Disease samples: ['Leukemia', 'Breast Cancer', 'Lymphoma', 'Lung Cancer']
+  Normal_Value sample: ['Normal WBC', 'Normal WBC']
+  Abnormal_Value sample: ['Elevated WBC', 'Elevated WBC']
+  BP sample: ['108/60', '98/60', '96/78']
+  HR sample: [58, 91, 75]
+  Temp sample: [98.7, 98.8, 97.9]
+  Symptoms sample: Fatigue, Frequent Infections
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== pathology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['High', 'Medium', 'Low']
+  Gender: ['Female', 'Male', 'Other']
+  Disease nunique: 4
+  Disease samples: ['Inflammation', 'Anemia', 'Clotting Disorder', 'Infection']
+  Normal_Value sample: ['<3 mg/L', '13-17 g/dL']
+  Abnormal_Value sample: ['>3 mg/L', '<12 g/dL']
+  BP sample: ['159/106', '123/92', '118/101']
+  HR sample: [77, 86, 89]
+  Temp sample: [98.8, 98.3, 98.5]
+  Symptoms sample: Swelling, Pain
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== pulmonology_dataset_5000.csv ===
+  Shape: (5000, 12)
+  Risk_Level: ['Low', 'High', 'Medium']
+  Gender: ['Male', 'Other', 'Female']
+  Disease nunique: 4
+  Disease samples: ['COPD', 'Pneumonia', 'Tuberculosis', 'Asthma']
+  Normal_Value sample: ['FEV1/FVC ≥ 70%', 'FEV1/FVC ≥ 70%']
+  Abnormal_Value sample: ['FEV1/FVC < 70%', 'FEV1/FVC < 70%']
+  BP sample: ['122/80', '160/62', '104/84']
+  HR sample: [97, 83, 73]
+  Temp sample: [96.9, 98.5, 98.9]
+  Symptoms sample: Chronic Cough, Mucus Production, Breathlessness
+  Nulls: {'Patient_ID': 0, 'Age': 0, 'Gender': 0, 'Detailed_Symptoms': 0, 'Blood Pressure': 0, 'Heart Rate': 0, 'Temperature': 0, 'Disease': 0, 'Required_Test': 0, 'Normal_Value': 0, 'Abnormal_Value': 0, 'Risk_Level': 0}
+
+=== MERGED TOTAL ===
+  Shape: (45000, 12)
+  Total diseases: 38
+  All diseases: ['Acne', 'Anemia', 'Arrhythmia', 'Asthma', 'Breast Cancer', 'COPD', 'Clotting Disorder', 'Coronary Artery Disease', 'Diabetes', 'Eating Disorder', 'Eczema', 'Epilepsy', 'Hearing Loss', 'Heart Failure', 'Hypertension', 'Hyperthyroidism', 'Hypothyroidism', 'Infection', 'Inflammation', 'Leukemia', 'Lung Cancer', 'Lymphoma', 'Malnutrition', 'Migraine', 'Multiple Sclerosis', 'Myocardial Infarction', 'Obesity', 'Otitis Media', 'PCOS', "Parkinson's Disease", 'Pneumonia', 'Psoriasis', 'Sinusitis', 'Skin Infection', 'Stroke', 'Tonsillitis', 'Tuberculosis', 'Vitamin Deficiency']
+  Risk distribution: {'High': 15135, 'Medium': 14982, 'Low': 14883}
