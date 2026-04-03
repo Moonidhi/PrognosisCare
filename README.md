@@ -1,4 +1,7 @@
-﻿# Prognosis Care
+## 🎬 Demo Video
+
+[![Watch Demo] (https://drive.google.com/file/d/1x4VNd0LudalAU7wD8bwS-CogIKyZRHFM/view?usp=drive_link)
+ # Prognosis Care
 
 Responsive React frontend for an AI-powered healthcare triage and medical assistant system with integrated lab test booking, billing, payment simulation, booking confirmation, dashboard updates, and hospital-side report delivery simulation.
 
