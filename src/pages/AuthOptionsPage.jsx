@@ -158,13 +158,10 @@ function AuthOptionsPage() {
               <p className="text-slate-500 text-sm mb-8 flex-grow">
                 Manage doctors, departments, and hospital profile.
               </p>
-              <div className="space-y-3 mt-auto">
+              <div className="mt-auto">
                 <Link to="/hospital-login" className="flex items-center justify-center w-full py-3 px-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20 group/btn">
                   Admin Login
                   <ChevronRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-0.5 transition-transform" />
-                </Link>
-                <Link to="/hospital-signup" className="flex items-center justify-center w-full py-3 px-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-50 transition-colors">
-                  Register
                 </Link>
               </div>
             </div>
