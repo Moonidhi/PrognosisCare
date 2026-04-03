@@ -1,0 +1,334 @@
+{
+    "paths": {
+        "data_dir": "Data",
+        "model_dir": "model"
+    },
+    "model_params": {
+        "n_estimators": 200,
+        "max_depth": 30,
+        "min_samples_split": 5,
+        "n_jobs": -1,
+        "random_state": 42,
+        "class_weight": "balanced"
+    },
+    "features": {
+        "numeric": [
+            "Age",
+            "BP_Systolic",
+            "BP_Diastolic",
+            "Heart Rate",
+            "Temperature"
+        ],
+        "categorical": [
+            "Gender"
+        ],
+        "text": "Detailed_Symptoms"
+    },
+    "thresholds": {
+        "bp_systolic": {
+            "normal_min": 90,
+            "normal_max": 140,
+            "critical_min": 80,
+            "critical_max": 180
+        },
+        "bp_diastolic": {
+            "normal_min": 60,
+            "normal_max": 90,
+            "critical_min": 50,
+            "critical_max": 110
+        },
+        "heart_rate": {
+            "normal_min": 60,
+            "normal_max": 100,
+            "critical_min": 50,
+            "critical_max": 120
+        },
+        "temperature": {
+            "normal_min": 96.0,
+            "normal_max": 100.4,
+            "critical_min": 95.0,
+            "critical_max": 103.0
+        }
+    },
+    "specialty_map": {
+        "Myocardial Infarction": "Cardiology",
+        "Arrhythmia": "Cardiology",
+        "Hypertension": "Cardiology",
+        "Coronary Artery Disease": "Cardiology",
+        "Heart Failure": "Cardiology",
+        "Psoriasis": "Dermatology",
+        "Acne": "Dermatology",
+        "Skin Infection": "Dermatology",
+        "Eczema": "Dermatology",
+        "Hypothyroidism": "Endocrinology",
+        "PCOS": "Endocrinology",
+        "Hyperthyroidism": "Endocrinology",
+        "Diabetes": "Endocrinology",
+        "Otitis Media": "ENT",
+        "Sinusitis": "ENT",
+        "Tonsillitis": "ENT",
+        "Hearing Loss": "ENT",
+        "Multiple Sclerosis": "Neurology",
+        "Parkinson's Disease": "Neurology",
+        "Epilepsy": "Neurology",
+        "Stroke": "Neurology",
+        "Migraine": "Neurology",
+        "Malnutrition": "Nutrition & Dietetics",
+        "Eating Disorder": "Nutrition & Dietetics",
+        "Obesity": "Nutrition & Dietetics",
+        "Vitamin Deficiency": "Nutrition & Dietetics",
+        "Leukemia": "Oncology",
+        "Breast Cancer": "Oncology",
+        "Lymphoma": "Oncology",
+        "Lung Cancer": "Oncology",
+        "Inflammation": "Pathology",
+        "Anemia": "Pathology",
+        "Clotting Disorder": "Pathology",
+        "Infection": "Pathology",
+        "COPD": "Pulmonology",
+        "Pneumonia": "Pulmonology",
+        "Tuberculosis": "Pulmonology",
+        "Asthma": "Pulmonology"
+    },
+    "disease_base_risk": {
+        "Myocardial Infarction": "High",
+        "Heart Failure": "High",
+        "Stroke": "High",
+        "Pneumonia": "High",
+        "Leukemia": "High",
+        "Lung Cancer": "High",
+        "Lymphoma": "High",
+        "Clotting Disorder": "High",
+        "Hypertension": "Medium",
+        "Coronary Artery Disease": "Medium",
+        "Arrhythmia": "Medium",
+        "Diabetes": "Medium",
+        "Hyperthyroidism": "Medium",
+        "Hypothyroidism": "Medium",
+        "Multiple Sclerosis": "Medium",
+        "Parkinson's Disease": "Medium",
+        "Epilepsy": "Medium",
+        "COPD": "Medium",
+        "Asthma": "Medium",
+        "Tuberculosis": "Medium",
+        "Anemia": "Medium",
+        "Infection": "Medium",
+        "Inflammation": "Medium",
+        "Obesity": "Medium",
+        "Eating Disorder": "Medium",
+        "Malnutrition": "Medium",
+        "Psoriasis": "Low",
+        "Acne": "Low",
+        "Skin Infection": "Low",
+        "Eczema": "Low",
+        "Otitis Media": "Low",
+        "Sinusitis": "Low",
+        "Tonsillitis": "Low",
+        "Hearing Loss": "Low",
+        "Migraine": "Low",
+        "Vitamin Deficiency": "Low",
+        "PCOS": "Low"
+    },
+    "test_recommendations": {
+        "Cardiology": [
+            {
+                "id": "test-ecg",
+                "name": "ECG",
+                "cost": 1200,
+                "reason": "Standard cardiac assessment."
+            },
+            {
+                "id": "test-lipid",
+                "name": "Lipid Profile",
+                "cost": 1400,
+                "reason": "Check cholesterol levels."
+            },
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "General blood health."
+            }
+        ],
+        "Dermatology": [
+            {
+                "id": "test-skin-biopsy",
+                "name": "Skin Biopsy",
+                "cost": 2500,
+                "reason": "Microscopic examination of skin tissue."
+            },
+            {
+                "id": "test-allergy",
+                "name": "Allergy Panel",
+                "cost": 3000,
+                "reason": "Detect allergic triggers."
+            },
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "Check for infection signs."
+            }
+        ],
+        "Endocrinology": [
+            {
+                "id": "test-thyroid",
+                "name": "Thyroid Profile",
+                "cost": 1100,
+                "reason": "Assess thyroid function."
+            },
+            {
+                "id": "test-hba1c",
+                "name": "HbA1c",
+                "cost": 900,
+                "reason": "Diabetes screening."
+            },
+            {
+                "id": "test-lipid",
+                "name": "Lipid Profile",
+                "cost": 1400,
+                "reason": "Metabolic health check."
+            }
+        ],
+        "ENT": [
+            {
+                "id": "test-audiometry",
+                "name": "Audiometry",
+                "cost": 1500,
+                "reason": "Hearing assessment."
+            },
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "Check for infection."
+            },
+            {
+                "id": "test-xray-sinus",
+                "name": "X-Ray PNS",
+                "cost": 1000,
+                "reason": "Sinus visualization."
+            }
+        ],
+        "Neurology": [
+            {
+                "id": "test-mri-brain",
+                "name": "MRI Brain",
+                "cost": 6000,
+                "reason": "Detailed brain imaging."
+            },
+            {
+                "id": "test-eeg",
+                "name": "EEG",
+                "cost": 2500,
+                "reason": "Brain electrical activity."
+            },
+            {
+                "id": "test-vitamin-b12",
+                "name": "Vitamin B12",
+                "cost": 1800,
+                "reason": "Nerve health check."
+            }
+        ],
+        "Nutrition & Dietetics": [
+            {
+                "id": "test-vitamin-profile",
+                "name": "Vitamin Profile",
+                "cost": 2500,
+                "reason": "Nutritional deficiency check."
+            },
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "Anemia screening."
+            },
+            {
+                "id": "test-lipid",
+                "name": "Lipid Profile",
+                "cost": 1400,
+                "reason": "Dietary impact on cholesterol."
+            }
+        ],
+        "Oncology": [
+            {
+                "id": "test-pet-ct",
+                "name": "PET-CT Scan",
+                "cost": 15000,
+                "reason": "Cancer staging and detection."
+            },
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "General health status."
+            },
+            {
+                "id": "test-biopsy",
+                "name": "Tissue Biopsy",
+                "cost": 4000,
+                "reason": "Confirm malignancy."
+            }
+        ],
+        "Pathology": [
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "Basic pathology screen."
+            },
+            {
+                "id": "test-esr",
+                "name": "ESR",
+                "cost": 300,
+                "reason": "Inflammation marker."
+            },
+            {
+                "id": "test-crp",
+                "name": "CRP",
+                "cost": 600,
+                "reason": "Infection/Inflammation check."
+            }
+        ],
+        "Pulmonology": [
+            {
+                "id": "test-chest-xray",
+                "name": "Chest X-Ray",
+                "cost": 950,
+                "reason": "Lung imaging."
+            },
+            {
+                "id": "test-pft",
+                "name": "PFT",
+                "cost": 1500,
+                "reason": "Lung function test."
+            },
+            {
+                "id": "test-abg",
+                "name": "Arterial Blood Gas",
+                "cost": 1800,
+                "reason": "Oxygen/CO2 levels."
+            }
+        ],
+        "General Medicine": [
+            {
+                "id": "test-cbc",
+                "name": "Blood Test (CBC)",
+                "cost": 750,
+                "reason": "General health check."
+            },
+            {
+                "id": "test-lft",
+                "name": "Liver Function Test",
+                "cost": 1300,
+                "reason": "Liver health."
+            },
+            {
+                "id": "test-kft",
+                "name": "Kidney Function Test",
+                "cost": 1400,
+                "reason": "Kidney health."
+            }
+        ]
+    }
+}
