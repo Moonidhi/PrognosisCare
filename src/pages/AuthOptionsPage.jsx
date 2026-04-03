@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { useAuth } from '../context/AuthContext';
 import {
@@ -19,8 +19,22 @@ function AuthOptionsPage() {
     return <Navigate to={getRoleHomeRoute(currentUser.role)} replace />;
   }
 
+  const [isSupportOpen, setIsSupportOpen] = useState(false);
   const blob1Ref = useRef(null);
   const blob2Ref = useRef(null);
+
+  useEffect(() => {
+    if (!isSupportOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsSupportOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isSupportOpen]);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -190,9 +204,67 @@ function AuthOptionsPage() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-slate-400">
-            Need help? <a href="#" className="font-medium text-med-600 hover:underline">Contact Support</a>
+            Need help?{' '}
+            <button
+              type="button"
+              onClick={() => setIsSupportOpen(true)}
+              className="font-medium text-med-600 hover:underline"
+            >
+              Contact Support
+            </button>
           </p>
         </div>
+
+        <AnimatePresence>
+          {isSupportOpen ? (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsSupportOpen(false)}
+            >
+              <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" />
+              <motion.div
+                className="relative w-full max-w-sm rounded-2xl bg-white p-6 shadow-2xl"
+                initial={{ opacity: 0, scale: 0.96 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="support-modal-title"
+                onClick={(event) => event.stopPropagation()}
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-med-600">Support</p>
+                    <h3 id="support-modal-title" className="mt-1 text-xl font-bold text-slate-900">Contact Support</h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setIsSupportOpen(false)}
+                    className="rounded-lg px-2 py-1 text-sm font-semibold text-slate-500 hover:bg-slate-100"
+                    aria-label="Close support modal"
+                  >
+                    X
+                  </button>
+                </div>
+
+                <div className="mt-4 space-y-2 text-sm text-slate-700">
+                  <p><span className="font-semibold">Email:</span> prognosiscare@gmail.com</p>
+                  <p><span className="font-semibold">Phone:</span> +91 79867 80845</p>
+                </div>
+
+                <div className="mt-5 flex justify-end">
+                  <button type="button" className="btn-secondary" onClick={() => setIsSupportOpen(false)}>
+                    Close
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </div>
     </div>
   );
