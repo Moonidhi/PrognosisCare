@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.page-shell {
+  @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-2xl bg-white p-5 shadow-card sm:p-6;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-med-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-med-700 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 outline-none ring-med-100 transition focus:border-med-500 focus:ring-4;
+}
+
+.auth-shell {
+  @apply min-h-screen bg-gradient-to-br from-blue-100 via-sky-50 to-white;
+}
+
+.auth-split {
+  @apply mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 px-4 py-8 lg:grid-cols-2 lg:px-8;
+}
+
+.auth-brand-panel {
+  @apply relative hidden overflow-hidden rounded-3xl bg-gradient-to-br from-med-700 to-blue-600 p-10 text-white shadow-card lg:flex lg:flex-col lg:justify-between;
+}
+
+.auth-form-wrap {
+  @apply flex items-center justify-center py-6 lg:py-0;
+}
+
+.auth-glass-card {
+  @apply w-full max-w-xl rounded-3xl border border-white/50 bg-white/65 p-6 shadow-card backdrop-blur-md transition-all duration-300 sm:p-8;
+}
+
+.floating-field {
+  @apply relative;
+}
+
+.floating-input {
+  @apply h-12 w-full rounded-xl border border-slate-200 bg-white/90 px-4 pt-5 text-sm text-slate-900 outline-none ring-med-100 transition-all duration-200 placeholder:text-transparent focus:border-med-500 focus:ring-4;
+}
+
+.floating-label {
+  @apply pointer-events-none absolute left-3 top-2 origin-left rounded bg-white/70 px-1 text-xs text-slate-500 transition-all duration-200;
+}
+
+.floating-input:placeholder-shown + .floating-label {
+  @apply top-4 text-sm text-slate-400;
+}
+
+.floating-input:focus + .floating-label {
+  @apply top-2 text-xs text-med-600;
+}
+
+.spinner {
+  @apply inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/70 border-t-transparent;
+}

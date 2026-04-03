@@ -1,0 +1,14 @@
+{
+  "Disease": {
+    "accuracy": 1.0,
+    "f1_weighted": 1.0
+  },
+  "Normal_Abnormal": {
+    "accuracy": 0.9998,
+    "f1_weighted": 0.9998
+  },
+  "Risk_Level": {
+    "accuracy": 0.9971,
+    "f1_weighted": 0.9971
+  }
+}
